@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeButton from './ThemeButton';
+import ThemedButton from './ThemeButton';
 import { themes, ThemeContext } from './themes';
 
 class App extends React.Component {
@@ -18,9 +18,9 @@ class App extends React.Component {
     return (
       <div>
         <ThemeContext.Provider value={this.state.theme}>
-          <ThemeButton onClick={this.toggleTheme}>Dynamic Theme</ThemeButton>
+          <ThemedButton onClick={this.toggleTheme}>Dynamic Theme</ThemedButton>
         </ThemeContext.Provider>
-        <ThemeButton onClick={this.toggleTheme}>Default Theme</ThemeButton>
+        <ThemedButton onClick={this.toggleTheme}>Default Theme</ThemedButton>
       </div>
     );
   }
