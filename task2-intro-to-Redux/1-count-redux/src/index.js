@@ -7,8 +7,8 @@ export const increment = () => {
   return { type: INCREMENT };
 };
 
-export const decrement = {
-  type: DECREMENT,
+export const decrement = () => {
+  return { type: DECREMENT };
 };
 
 export const counterReducer = (state = 0, action) => {
