@@ -35,7 +35,5 @@ store.subscribe(() => {
   const currentValue =
     state.history.length === 0 ? [] : state.history.reduce((acc, value) => acc + value);
   const historyString = addPlusHistory(state.history);
-  console.log(historyString);
-  console.log(currentValue);
   resultElem.textContent = state.history.length === 0 ? '' : `${historyString} = ${currentValue}`;
 });
