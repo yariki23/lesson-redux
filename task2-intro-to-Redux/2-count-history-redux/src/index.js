@@ -20,20 +20,10 @@ incrementBtn.addEventListener('click', onIncrement);
 decrementBtn.addEventListener('click', onDecrement);
 resetBtn.addEventListener('click', onReset);
 
-const addPlusHistory = history => {
-  let historyStr = [...history];
-  for (let i = 0; i < historyStr.length; i++) {
-    if (historyStr[i + 1] === 1) {
-      historyStr[i + 1] = '+1';
-    }
-  }
-  return historyStr.join('');
-};
-
 store.subscribe(() => {
   const state = store.getState();
   const currentValue =
     state.history.length === 0 ? [] : state.history.reduce((acc, value) => acc + value);
-  const historyString = addPlusHistory(state.history);
+  const historyString = state.history.map(num => (num === 1 ? '+1' : num)).join('');
   resultElem.textContent = state.history.length === 0 ? '' : `${historyString} = ${currentValue}`;
 });
