@@ -1,4 +1,4 @@
-export const actionCreators = (state = initialState, action) => {
+export const actionCreators = (state, action) => {
   switch (action.type) {
     case 'ADDUSER':
       return {
