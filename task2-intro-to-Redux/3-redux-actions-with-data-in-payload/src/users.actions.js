@@ -1,10 +1,7 @@
-export const addUser = (id, name) => {
+export const addUser = (obj) => {
   return {
     type: 'ADDUSER',
-    payload: {
-      id,
-      name,
-    },
+    payload: obj
   };
 };
 

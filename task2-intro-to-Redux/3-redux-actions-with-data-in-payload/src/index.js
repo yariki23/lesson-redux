@@ -1,11 +1,11 @@
 import store from './store';
-import { addUser, deleteUser } from './users.actions'
+import { addUser, deleteUser } from './users.actions';
 
 const onAddUser = (id, name) => {
   store.dispatch(addUser(id, name));
 };
 
-const onDeleteUser = (id) => {
+const onDeleteUser = id => {
   store.dispatch(deleteUser(id));
 };
 
@@ -14,7 +14,7 @@ store.subscribe(() => {
   console.log(state);
 });
 
-
-onAddUser(2, "Flaer");
-onAddUser(1, "Luft");
+onAddUser({ id: 2, name: 'Flaer' });
+onAddUser({ id: 1, name: 'Luft' });
 onDeleteUser(1);
+onAddUser({ id: 1, name: 'Cersh' });
