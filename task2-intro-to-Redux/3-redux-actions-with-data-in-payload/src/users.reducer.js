@@ -1,6 +1,4 @@
-import { initialState } from './store';
-
-export const usersReducer = (state = initialState, action) => {
+export const usersReducer = (state = { usersList: [] }, action) => {
   switch (action.type) {
     case 'ADDUSER':
       return {
