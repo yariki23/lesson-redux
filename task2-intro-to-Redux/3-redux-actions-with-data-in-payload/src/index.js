@@ -1,4 +1,5 @@
-import store, { addUser, deleteUser } from './store';
+import store from './store';
+import { addUser, deleteUser } from './users.actions'
 
 const onAddUser = (id, name) => {
   store.dispatch(addUser(id, name));

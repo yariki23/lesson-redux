@@ -1,28 +1,10 @@
 import { createStore } from 'redux';
-import { actionCreators } from './users.actions';
-
-export const addUser = (id, name) => {
-  return {
-    type: 'ADDUSER',
-    payload: {
-      id,
-      name,
-    },
-  };
-};
-export const deleteUser = id => {
-  return {
-    type: 'DELETEUSER',
-    payload: {
-      id,
-    },
-  };
-};
+import { usersReducer } from './users.reducer';
 
 export const initialState = {
   usersList: [],
 };
 
-const store = createStore(actionCreators);
+const store = createStore(usersReducer);
 
 export default store;

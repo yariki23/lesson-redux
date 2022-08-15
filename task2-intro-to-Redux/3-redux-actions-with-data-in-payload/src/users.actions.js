@@ -1,18 +1,18 @@
-import { initialState } from './store';
+export const addUser = (id, name) => {
+  return {
+    type: 'ADDUSER',
+    payload: {
+      id,
+      name,
+    },
+  };
+};
 
-export const actionCreators = (state = initialState, action) => {
-  switch (action.type) {
-    case 'ADDUSER':
-      return {
-        ...state,
-        usersList: state.usersList.concat(action.payload),
-      };
-    case 'DELETEUSER':
-      return {
-        ...state,
-        usersList: state.usersList.filter(user => user.id !== action.payload.id),
-      };
-    default:
-      return state;
-  }
+export const deleteUser = id => {
+  return {
+    type: 'DELETEUSER',
+    payload: {
+      id,
+    },
+  };
 };
