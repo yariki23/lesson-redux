@@ -1,2 +1,19 @@
-import store from './store';
+import store, { addUser, deleteUser } from './store';
 
+const onAddUser = (id, name) => {
+  store.dispatch(addUser(id, name));
+};
+
+const onDeleteUser = (id) => {
+  store.dispatch(deleteUser(id));
+};
+
+store.subscribe(() => {
+  const state = store.getState();
+  console.log(state);
+});
+
+
+onAddUser(2, "Flaer");
+onAddUser(1, "Luft");
+onDeleteUser(1);
