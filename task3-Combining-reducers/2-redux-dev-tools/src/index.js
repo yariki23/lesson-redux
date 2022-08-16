@@ -14,5 +14,10 @@ store.subscribe(() => {
 });
 
 onIncrement();
+onIncrement();
+onIncrement();
+onIncrement();
+onIncrement();
+onIncrement();
 onDecrement();
 onDecrement();
