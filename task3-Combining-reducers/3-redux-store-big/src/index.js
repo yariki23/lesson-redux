@@ -1,4 +1,4 @@
-import { addProduct, removeProduct } from './card.actions';
+import { addProduct, removeProduct } from './cart.actions';
 import { setLanguage } from './language.actions';
 import store from './store';
 import { setUser, removeUser } from './user.actions';
