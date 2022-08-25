@@ -6,21 +6,6 @@ import * as usersActions from './users.actions';
 
 const UsersList = ({ users, currentPage, prevPage, nextPage }) => {
   const itemsPerPage = 3;
-
-  // prevBtnHandler = () => {
-  //   this.setState({
-  //     currentPage: this.state.currentPage - 1,
-  //   });
-  // };
-
-  // nextBtnHandler = () => {
-  //   this.setState({
-  //     currentPage: this.state.currentPage + 1,
-  //   });
-  // };
-
-  console.log(currentPage);
-
   const startIndex = (currentPage) * 3;
   const endIndex = startIndex + itemsPerPage;
   const usersToRender = users.slice(startIndex, endIndex);
