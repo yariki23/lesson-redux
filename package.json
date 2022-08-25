@@ -25,6 +25,12 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.26.1",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  },
+  "dependencies": {
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0"
   }
 }
