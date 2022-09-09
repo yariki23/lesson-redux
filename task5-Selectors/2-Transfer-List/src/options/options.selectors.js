@@ -21,3 +21,4 @@ export const availableOptionsSelector = createSelector(
     return allOptionsList.filter(option => !selectedIds.includes(option.id));
   },
 );
+x
