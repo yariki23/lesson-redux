@@ -1,3 +1,5 @@
+import { getUserData } from './users.gateway';
+
 export const SHOW_SPINNER = 'SHOW_SPINNER';
 export const SHOW_DATA_RECIEVED = 'SHOW_DATA_RECIEVED';
 
@@ -16,8 +18,11 @@ export const userDataRecieved = userData => {
   };
 };
 
-export const fetchUserData = () => {
-  return function() {
-    console.log('I am async action');
-  }
-}
+export const fetchUserData = userName => {
+  return function (dispatch) {
+    getUserData(userName).then(userData => {
+      // console.log(userData);
+      dispatch(userDataRecieved(userData));
+    });
+  };
+};
