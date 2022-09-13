@@ -5,7 +5,7 @@ import * as weatherActions from './weather/weather.actions';
 
 const Weather = citiesWeather => {
   useEffect(() => {
-    citiesWeather.fetchWeatherData();
+    citiesWeather.getWeatherData();
   }, []);
 
   return (
@@ -30,7 +30,7 @@ const mapState = state => {
 };
 
 const mapDispatch = {
-  fetchWeatherData: weatherActions.fetchWeatherData,
+  getWeatherData: weatherActions.getWeatherData,
 };
 
 export default connect(mapState, mapDispatch)(Weather);
