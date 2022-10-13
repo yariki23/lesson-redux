@@ -5,7 +5,6 @@ import * as tasksActions from './tasks.action';
 
 const Task = ({ text, done, _id, updateTask, deleteTask }) => {
   const listItemClasses = classNames('list-item', { 'list-item_done': done });
-  console.log(_id);
   return (
     <li className={listItemClasses}>
       <input

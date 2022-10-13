@@ -62,7 +62,6 @@ const initialState = {
   filterText: '',
   usersList: users,
 };
-console.log(initialState);
 
 const optionsReducer = (state = initialState, action) => {
   switch (action.type) {

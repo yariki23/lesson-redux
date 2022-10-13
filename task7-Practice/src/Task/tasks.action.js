@@ -19,6 +19,7 @@ export const getTasks = () => {
     });
   };
 };
+
 export const fetchCreateTask = text => {
   return function (dispatch) {
     const dataTask = {
